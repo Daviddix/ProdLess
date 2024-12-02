@@ -1,0 +1,94 @@
+@font-face {
+    font-family: apfl-regular;
+    src: url("../../assets/font/ApfelGrotezk-Regular.otf");
+}
+
+@font-face {
+    font-family: apfl-medium;
+    src: url("../../assets/font/ApfelGrotezk-Mittel.otf");
+}
+
+*, *::before, *::after{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: apfl-regular;
+}
+
+body{
+    border:solid;
+    width:300px;
+    background-color: #fafafa;
+    height:400px;
+}
+
+body > h1{
+    text-align: center;
+    font-family: apfl-medium;
+    margin: 0 0 .5rem 0;
+}
+
+.toggle-container{
+    background-color: #fff;
+    width:95%;
+    margin: auto;
+    padding: 1rem;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    border: 1px solid rgba(0, 0, 0, 0.096);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle{
+    border: 1px solid rgba(0, 0, 0, 0.096);
+    width:55px;
+    border-radius: 1rem;
+    height:30px;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    padding:.1rem .2rem;
+    cursor: pointer;
+    background-color: rgb(130, 114, 146);
+}
+
+.toggle .circle{
+    aspect-ratio: 1/1;
+    height: 100%;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition:transform ease-in .2s;
+    -webkit-transition:transform ease-in .2s;
+    -moz-transition:transform ease-in .2s;
+    -ms-transition:transform ease-in .2s;
+    -o-transition:transform ease-in .2s;
+}
+
+.toggle.active{
+    background-color: rebeccapurple;
+}
+
+.toggle.active .circle{
+    transform: translateX(23px);
+    -webkit-transform: translateX(23px);
+    -moz-transform: translateX(23px);
+    -ms-transform: translateX(23px);
+    -o-transform: translateX(23px);
+}
+
+body > img{
+    width:90%;
+    height: 70%;
+    margin: auto;
+    display:none;
+}

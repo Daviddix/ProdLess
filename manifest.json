@@ -1,0 +1,27 @@
+{
+    "manifest_version" : 3,
+    "name" : "Prodless",
+    "description" : "An extension that spawns random brainrot videos to stop you from being productive",
+    "version" : "0.0.4",
+    "action" :{
+        "default_popup" : "./src/pages/homepage/home.html",
+        "default_title": "Be Less productive"
+    },
+    "background":{
+        "service_worker":"./src/background.js"
+    },
+    "side_panel" : {
+        "default_path" : "./src/pages/homepage/home.html"
+    },
+    "permissions": [
+        "activeTab",
+        "tabs"
+    ],
+    "content_scripts": [
+        
+    {
+        "matches": ["<all_urls>"],
+        "js" : ["./src/content-scripts/content-script.js"],
+        "css": ["./src/content-scripts/content-script.css"]
+    }]
+}
